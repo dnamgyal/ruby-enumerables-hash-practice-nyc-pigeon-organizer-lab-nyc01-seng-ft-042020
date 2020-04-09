@@ -1,8 +1,6 @@
 require 'pry'
 
 
-
-
 def nyc_pigeon_organizer(data)
   updated_data = {}
   data.each do |color_gender_location, value_hash|

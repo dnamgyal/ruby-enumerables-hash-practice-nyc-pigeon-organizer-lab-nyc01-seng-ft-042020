@@ -1,6 +1,5 @@
 require 'pry'
 
-
 def nyc_pigeon_organizer(data)
   updated_data = {}
   data.each do |attributes, value_hash|
@@ -8,7 +7,7 @@ def nyc_pigeon_organizer(data)
       names_array.each do |name|
         updated_data[name] ||= {}
         updated_data[name][attributes] ||= []
-        updated_data[name][attributes].push(type.to_s)
+        updated_data[name][attributes] << type.to_s
       end
     end
   end

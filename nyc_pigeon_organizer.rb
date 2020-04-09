@@ -3,12 +3,12 @@ require 'pry'
 
 def nyc_pigeon_organizer(data)
   updated_data = {}
-  data.each do |color_gender_location, value_hash|
-    value_hash.each do |attributes, value_array|
-      value_array.each do |name|
+  data.each do |attributes, value_hash|
+    value_hash.each do |type, names_array|
+      names_array.each do |name|
         updated_data[name] ||= {}
-        updated_data[name][color_gender_location] ||= []
-        updated_data[name][color_gender_location].push(attributes.to_s)
+        updated_data[name][attributes] ||= []
+        updated_data[name][attributes].push(type.to_s)
       end
     end
   end
